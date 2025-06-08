@@ -1,0 +1,30 @@
+{
+  "name": "moalimin-monorepo",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Plateforme d'apprentissage islamique - React Native + Next.js + Supabase",
+  "workspaces": [
+    "packages/mobile",
+    "packages/web",
+    "packages/shared"
+  ],
+  "scripts": {
+    "dev:mobile": "cd packages/mobile && npm run start",
+    "dev:web": "cd packages/web && npm run dev",
+    "build:web": "cd packages/web && npm run build",
+    "build:mobile": "cd packages/mobile && npm run build",
+    "supabase:start": "npx supabase start",
+    "supabase:stop": "npx supabase stop",
+    "supabase:reset": "npx supabase db reset",
+    "setup": "npm install && npm run setup:packages",
+    "setup:packages": "cd packages/mobile && npm install && cd ../web && npm install && cd ../shared && npm install"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+} 
