@@ -1,7 +1,7 @@
 {
-  "name": "@moalimin/mobile",
+  "name": "@alimni/mobile",
+  "main": "index.js",
   "version": "1.0.0",
-  "main": "expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -9,7 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "@moalimin/shared": "*",
+    "@alimni/shared": "*",
     "@expo/vector-icons": "^14.0.0",
     "@react-navigation/native": "^6.1.9",
     "@react-navigation/native-stack": "^6.9.17",

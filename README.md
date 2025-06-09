@@ -1,9 +1,11 @@
-# 🕌 Moalimin - Plateforme d'apprentissage islamique
+# 🎓 Alimni - Plateforme d'apprentissage universelle
 
-## 📱 Architecture Monorepo
+> **LMS universel modulaire** permettant à toute organisation d'enseigner n'importe quel domaine avec fonctionnalités activables par corps de métier.
+
+## 📁 Structure du projet
 
 ```
-moalimin/
+alimni/
 ├── packages/
 │   ├── mobile/          # React Native + Expo
 │   ├── web/            # Next.js + React
@@ -24,7 +26,7 @@ moalimin/
 ```bash
 # Cloner et installer
 git clone <votre-repo>
-cd moalimin
+cd alimni
 npm install
 
 # Installer les dépendances des packages
@@ -145,13 +147,13 @@ primary-600: #0284c7
 **Shared :**
 ```typescript
 // Types partagés
-import { User, Profile, Course } from '@moalimin/shared';
+import { User, Profile, Course } from '@alimni/shared';
 
 // Hook d'authentification
-import { useAuth } from '@moalimin/shared';
+import { useAuth } from '@alimni/shared';
 
 // Client Supabase
-import { supabase } from '@moalimin/shared';
+import { supabase } from '@alimni/shared';
 ```
 
 **Mobile :**
@@ -177,7 +179,7 @@ npm run supabase:reset  # Reset DB + migrations
 
 ### **Erreurs communes :**
 
-**"Cannot find module '@moalimin/shared'" :**
+**"Cannot find module '@alimni/shared'" :**
 ```bash
 npm run setup:packages
 ```

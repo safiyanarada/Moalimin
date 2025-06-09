@@ -1,0 +1,224 @@
+{
+  "project": {
+    "name": "Alimni - Plateforme d'Apprentissage Universelle",
+    "version": "2.0.0",
+    "description": "LMS universel permettant à toute organisation d'enseigner n'importe quel domaine avec fonctionnalités modulaires activables"
+  },
+  
+  "documentation": {
+    "required_reading": {
+      "architecture": [
+        "docs/ROADMAP_UNIVERSAL_LEARNING_PLATFORM.md",
+        "docs/DATABASE_ARCHITECTURE_UNIVERSAL.md",
+        "docs/MODULAR_ARCHITECTURE_STRATEGY.md"
+      ],
+      "development": [
+        "docs/PLAN_ACTION_IMMEDIAT.md",
+        "docs/INVENTORY_COMPLETE_ARCHIVE.md"
+      ],
+      "internationalization": [
+        "docs/INTERNATIONALIZATION_STRATEGY.md"
+      ],
+      "business": [
+        "docs/MONETIZATION_STRATEGY.md"
+      ],
+      "technical": [
+        "docs/TECHNICAL_STANDARDS.md"
+      ],
+      "branding": [
+        "docs/BRAND_IDENTITY_BRAINSTORM.md"
+      ]
+    },
+    
+    "consultation_rules": {
+      "database_changes": {
+        "must_read": ["docs/DATABASE_ARCHITECTURE_UNIVERSAL.md"],
+        "description": "Toujours consulter l'architecture DB avant toute modification de schéma"
+      },
+      "api_development": {
+        "must_read": ["docs/DATABASE_ARCHITECTURE_UNIVERSAL.md", "docs/TECHNICAL_STANDARDS.md"],
+        "description": "Respecter l'architecture API et les standards techniques"
+      },
+      "modular_features": {
+        "must_read": ["docs/MODULAR_ARCHITECTURE_STRATEGY.md", "docs/ROADMAP_UNIVERSAL_LEARNING_PLATFORM.md"],
+        "description": "Développer selon l'approche modulaire par corps de métier"
+      },
+      "frontend_components": {
+        "must_read": ["docs/INVENTORY_COMPLETE_ARCHIVE.md", "docs/INTERNATIONALIZATION_STRATEGY.md"],
+        "description": "Réutiliser les composants existants et supporter l'i18n"
+      },
+      "business_features": {
+        "must_read": ["docs/ROADMAP_UNIVERSAL_LEARNING_PLATFORM.md", "docs/MONETIZATION_STRATEGY.md"],
+        "description": "Aligner les fonctionnalités avec la roadmap et la stratégie de monétisation"
+      },
+      "multi_language": {
+        "must_read": ["docs/INTERNATIONALIZATION_STRATEGY.md"],
+        "description": "Implémenter le support multilingue selon les standards définis"
+      },
+      "planning": {
+        "must_read": ["docs/PLAN_ACTION_IMMEDIAT.md"],
+        "description": "Suivre le plan d'action et les priorités définies"
+      },
+      "branding_communication": {
+        "must_read": ["docs/BRAND_IDENTITY_BRAINSTORM.md"],
+        "description": "Respecter l'identité universelle et éviter références culturelles spécifiques"
+      }
+    }
+  },
+  
+  "development_standards": {
+    "quality": {
+      "code_quality": "STRICTEMENT OBLIGATOIRE",
+      "rules": [
+        "TypeScript strict mode activé",
+        "ESLint + Prettier configuration stricte",
+        "Tests unitaires pour fonctions critiques",
+        "Documentation JSDoc pour fonctions publiques",
+        "Code review obligatoire avant merge",
+        "Performance monitoring intégré"
+      ]
+    },
+    
+    "security": {
+      "level": "PRODUCTION ENTERPRISE",
+      "requirements": [
+        "Row Level Security (RLS) sur toutes les tables Supabase",
+        "Validation input avec Zod côté client ET serveur",
+        "Authentification JWT + refresh tokens",
+        "Chiffrement des données sensibles",
+        "Rate limiting sur toutes les APIs",
+        "CORS configuré strictement",
+        "Variables d'environnement sécurisées",
+        "Audit logs pour actions sensibles",
+        "Protection CSRF/XSS",
+        "Sanitisation HTML/SQL"
+      ]
+    },
+    
+    "performance": {
+      "targets": [
+        "First Contentful Paint < 1.5s",
+        "Largest Contentful Paint < 2.5s",
+        "Time to Interactive < 3s",
+        "Requêtes DB < 100ms en moyenne",
+        "Pagination pour listes > 50 items",
+        "Lazy loading pour composants lourds",
+        "Image optimization automatique",
+        "Bundle size monitoring"
+      ]
+    },
+    
+    "architecture": {
+      "patterns": [
+        "Clean Architecture avec séparation des responsabilités",
+        "Repository pattern pour accès données",
+        "Service layer pour logique métier",
+        "Hook patterns pour réutilisabilité React",
+        "Component composition vs inheritance",
+        "Error boundaries pour gestion erreurs",
+        "Suspense pour loading states",
+        "Context API pour état global minimal"
+      ]
+    }
+  },
+  
+  "technology_stack": {
+    "frontend": {
+      "framework": "Next.js 15 (App Router)",
+      "language": "TypeScript (strict mode)",
+      "styling": "Tailwind CSS + shadcn/ui",
+      "state": "Zustand + React Query",
+      "forms": "React Hook Form + Zod",
+      "i18n": "react-i18next",
+      "testing": "Vitest + Testing Library"
+    },
+    
+    "backend": {
+      "runtime": "Node.js + Express",
+      "language": "TypeScript",
+      "database": "PostgreSQL (Supabase)",
+      "auth": "Supabase Auth + JWT",
+      "storage": "Supabase Storage",
+      "validation": "Zod",
+      "testing": "Jest + Supertest"
+    },
+    
+    "mobile": {
+      "framework": "React Native + Expo",
+      "language": "TypeScript",
+      "navigation": "React Navigation",
+      "state": "Zustand (shared with web)"
+    },
+    
+    "infrastructure": {
+      "hosting_frontend": "Vercel",
+      "hosting_backend": "Railway/Render",
+      "database": "Supabase",
+      "cdn": "CloudFlare",
+      "monitoring": "Sentry + Posthog",
+      "ci_cd": "GitHub Actions"
+    }
+  },
+  
+  "business_rules": {
+    "universality": {
+      "principle": "STRICTEMENT UNIVERSEL - éviter toute référence culturelle/religieuse spécifique",
+      "naming": "Utiliser termes neutres et inclusifs internationalement",
+      "branding": "Identité visuelle et messaging universellement accessible"
+    },
+    
+    "multi_tenancy": {
+      "isolation": "Complete data isolation between organizations",
+      "default_limits": {
+        "free_plan": "10 users, 5 courses, 100MB storage",
+        "premium_plan": "100 users, 50 courses, 10GB storage", 
+        "enterprise_plan": "Unlimited users, unlimited courses, 100GB storage"
+      }
+    },
+    
+    "modularity": {
+      "core_modules": ["auth", "courses", "progress", "analytics", "notifications"],
+      "optional_modules": ["academic", "professional", "community", "assessments", "communication"],
+      "activation": "Per organization configuration in database"
+    },
+    
+    "internationalization": {
+      "required_languages": ["fr", "en", "ar"],
+      "rtl_support": "Native support for Arabic, Hebrew, Persian",
+      "cultural_adaptation": "Date formats, currencies, calendars per region"
+    }
+  },
+  
+  "coding_principles": {
+    "always_apply": [
+      "DRY (Don't Repeat Yourself)",
+      "SOLID principles",
+      "Composition over inheritance",
+      "Fail fast and fail clearly",
+      "Progressive enhancement",
+      "Accessibility first (WCAG 2.1 AA)",
+      "Mobile-first responsive design",
+      "SEO optimization",
+      "Performance optimization",
+      "Security by design",
+      "Cultural neutrality in naming and messaging"
+    ],
+    
+    "never_do": [
+      "Hardcode sensitive data",
+      "Skip input validation",
+      "Ignore error handling",
+      "Write code without types",
+      "Deploy without tests",
+      "Expose internal APIs publicly",
+      "Store passwords in plain text",
+      "Skip database migrations",
+      "Ignore accessibility",
+      "Create tight coupling",
+      "Use culturally specific references in code/UI"
+    ]
+  },
+  
+  "response_language": "FRENCH",
+  "response_format": "Always respond in French as specified in user rules"
+} 
